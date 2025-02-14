@@ -1,8 +1,12 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
+  font-family: Arial, sans-serif;
+  background-color: #1c3b2f;
+  color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -17,65 +21,145 @@ body {
 }
 
 header {
- height: 50px;
+  /* background-color: #1c3b2f; */
+  /* padding: 15px 10px; */
+  text-align: center;
+  border-bottom: 2px solid #ffcc00;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-  padding: 10px ;
-  background-color: #f8f8f8;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
-
-.search-bar {
-  width: 300px;
+header a img {
+  height: 50px;
+}
+header .search-bar {
   padding: 8px;
-  border-radius: 20px;
-  /* border: 1px solid #ccc; */
-  transition: border-color 0.3s ease;
+  border: 1px solid #ffcc00;
+  border-radius: 3px;
+  /* background: #1c3b2f; */
+  color: #ffffff;
+  margin: 0 8px;
 }
-
-.search-bar:focus {
-  border-color: #888;
+header .toggle-button {
+  padding: 8px 12px;
+  border: none;
+  background: #ffcc00;
+  color: #1c3b2f;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+header .timestamp {
+  margin-top: 8px;
+  font-size: 0.9rem;
 }
 
 #locations {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  gap: 15px;
 }
-
 .location {
+  background: #003366;
+  border: 1px solid #ffcc00;
+  border-radius: 5px;
+  padding: 10px;
+  width: 220px;
   text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
 }
-
-.location:hover {
-  transform: translateY(-5px) ;
-  
+.location img {
+  max-width: 100%;
+  border-radius: 3px;
 }
-
-.button {
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  height: 50px;
-  width: 150px;
-  border-radius: 20px;
-  margin: 10px;
+.location button.button {
+  margin-top: 5px;
+  padding: 6px 10px;
+  background-color: #ffcc00;
+  color: #1c3b2f;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
-.button:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.05);
+.location button.button:hover {
+  background-color: #e6b800;
 }
-
+.location button.favorite-button {
+  margin-top: 5px;
+  padding: 4px 8px;
+  background-color: #ffcc00;
+  color: #1c3b2f;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.location button.favorite-button:hover {
+  background-color: #e6b800;
+}
 .mapLink {
+  display: block;
+  margin-top: 5px;
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
   transition: opacity 0.3s ease;
   opacity: 0;
   display: none;
 }
-
 .mapLink.visible {
   opacity: 1;
+}
+
+#control-panel {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background-color: rgba(28, 59, 47, 0.95);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+#destination {
+  width: 300px;
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ffcc00;
+  border-radius: 3px;
+  background: #1c3b2f;
+  color: #ffffff;
+}
+#getRoute {
+  padding: 8px 15px;
+  border: none;
+  background-color: #ffcc00;
+  color: #1c3b2f;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#getRoute:hover {
+  background-color: #e6b800;
+}
+
+.ar-mode::before {
+  content: "AR MODE ACTIVE";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 20px;
+  font-size: 2em;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .toggle-button {
