@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/afit logo.png" />
+    <title>AFIT Lecture Hall Navigation</title>
+    <link rel="stylesheet" href="style4.css" />
+  </head>
+  <body class="light-mode">
+    <header>
+      <a href="index.html"
+        ><img
+          src="assets/download (4)Afitlogo.jpg"
+          alt=""
+          srcset=""
+          style="height: 50px"
+      /></a>
+      <input
+        type="text"
+        class="search-bar"
+        placeholder="Search for a hall....."
+        oninput="filterLocations(event)"
+      />
+      <div
+        class="toggle-button"
+        onclick="toggleMode()"
+        aria-label="Toggle light/dark mode"
+      >
+        ☀️
+      </div>
+      <div class="timestamp" id="timestamp"></div>
+    </header>
+    <!-- <div class="form-container">
+      <h3>Add a New Location</h3>
+      <input type="file" id="imageInput" accept="image/*" />
+      <input type="text" id="nameInput" placeholder="Enter location name" />
+      <input
+        type="text"
+        id="coordinatesInput"
+        placeholder="Enter coordinates (lat,lng)"
+      />
+      <button onclick="addLocation()">Add Location</button>
+    </div> -->
+    <div id="locations"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
