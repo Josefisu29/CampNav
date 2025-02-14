@@ -1,19 +1,19 @@
 const locations = [
-  {
-    imgSrc: "/assets/Alpha.jpg",
-    name: "Alfa Hall",
-    coordinates: "10.6089950,7.4438740",
-  },
-  {
-    imgSrc: "/assets/Mosgue.jpg",
-    name: "Mosugu Hall",
-    coordinates: "10.6088849,7.4441221",
-  },
-  {
-    imgSrc: "/assets/1st.jpg",
-    name: "FOS",
-    coordinates: "10.6092039,7.4447061",
-  },
+  // {
+  //   imgSrc: "/assets/Alpha.jpg",
+  //   name: "Alfa Hall",
+  //   coordinates: "10.6089950,7.4438740",
+  // },
+  // {
+  //   imgSrc: "/assets/Mosgue.jpg",
+  //   name: "Mosugu Hall",
+  //   coordinates: "10.6088849,7.4441221",
+  // },
+  // {
+  //   imgSrc: "/assets/1st.jpg",
+  //   name: "FOS",
+  //   coordinates: "10.6092039,7.4447061",
+  // },
   {
     imgSrc: "assets/2nd.jpg",
     name: "FSMS",
